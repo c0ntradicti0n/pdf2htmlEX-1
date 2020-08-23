@@ -260,6 +260,8 @@ protected:
     PDFDoc * cur_doc;
     Catalog * cur_catalog;
     int pageNum;
+    long wordNum = 0;
+
 
     double default_ctm[6];
 
@@ -371,7 +373,9 @@ protected:
         std::string path;
     } f_outline, f_pages, f_css;
     std::ofstream * f_curpage;
-    std::string cur_page_filename;
+        std::ofstream  f_curpage_feat;
+
+        std::string cur_page_filename;
 
     static const std::string MANIFEST_FILENAME;
 

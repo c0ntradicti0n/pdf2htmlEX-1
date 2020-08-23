@@ -85,7 +85,7 @@ public:
     void append_padding_char() { text.push_back(0); }
     void append_offset(double width);
     void append_state(const HTMLTextState & text_state);
-    void dump_text(std::ostream & out);
+    void dump_text(std::ostream & out, std::ostream & feat, long & wordNum);
 
     bool text_empty(void) const { return text.empty(); }
     void clear(void);
@@ -105,8 +105,8 @@ private:
      * Dump chars' unicode to output stream.
      * begin/pos is the index in 'text'.
      */
-    void dump_chars(std::ostream & out, int begin, int len);
-    void dump_char(std::ostream & out, int pos);
+    std::string dump_chars(std::ostream & out, std::ostream & feat, long & word_num, int begin, int len, bool & first);
+    char dump_char(std::ostream & out,std::ostream & feat,   long & wordNum, int pos);
 
     const Param & param;
     AllStateManager & all_manager;
@@ -128,6 +128,8 @@ private:
      */
     std::vector<int> text;
     std::vector<std::vector<Unicode> > decomposed_text;
+
+    void dump_chars(std::ostream &out, std::ostream &feat, int begin, int len);
 };
 
 } // namespace pdf2htmlEX

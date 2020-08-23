@@ -145,6 +145,7 @@ void HTMLRenderer::process(PDFDoc *doc)
             string filled_template_filename = (char*)str_fmt(param.page_filename.c_str(), i);
             auto page_fn = str_fmt("%s/%s", param.dest_dir.c_str(), filled_template_filename.c_str());
             f_curpage = new ofstream((char*)page_fn, ofstream::binary);
+
             if(!(*f_curpage))
                 throw string("Cannot open ") + (char*)page_fn + " for writing";
             set_stream_flags((*f_curpage));
@@ -172,6 +173,7 @@ void HTMLRenderer::process(PDFDoc *doc)
     }
     if(page_count >= 0 && param.quiet == 0)
         cerr << "Working: " << page_count << "/" << page_count;
+    f_curpage_feat.close();
 
     if(param.quiet == 0)
         cerr << endl;
@@ -188,6 +190,7 @@ void HTMLRenderer::process(PDFDoc *doc)
 
     if(param.quiet == 0)
         cerr << endl;
+
 }
 
 void HTMLRenderer::setDefaultCTM(const double *ctm)
@@ -255,7 +258,7 @@ void HTMLRenderer::endPage() {
     }
 
     // dump all text
-    html_text_page.dump_text(*f_curpage);
+    html_text_page.dump_text(*f_curpage, f_curpage_feat, wordNum);
     html_text_page.dump_css(f_css.fs);
     html_text_page.clear();
 
@@ -399,6 +402,9 @@ void HTMLRenderer::pre_process(PDFDoc * doc)
     {
         f_curpage = &f_pages.fs;
     }
+    std::string fullPath = doc->getFileName()->toStr();
+    fullPath += +".feat";
+    f_curpage_feat.open(fullPath);
 }
 
 void HTMLRenderer::post_process(void)

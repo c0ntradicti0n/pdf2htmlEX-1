@@ -44,7 +44,7 @@
 
 /* This implements a box filter that supports non-integer box sizes */
 
-#include <poppler-config.h>
+#include <config.h>
 
 #include <cstdint>
 #include <stdint.h>

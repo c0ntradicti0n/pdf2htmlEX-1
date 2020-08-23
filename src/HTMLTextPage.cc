@@ -27,7 +27,7 @@ HTMLTextPage::~HTMLTextPage()
         delete p;
 }
 
-void HTMLTextPage::dump_text(ostream & out)
+void HTMLTextPage::dump_text(ostream & out, ostream & feat, long & wordNum)
 {
     if(param.optimize_text)
     {
@@ -76,7 +76,7 @@ void HTMLTextPage::dump_text(ostream & out)
                 {
                     (*text_line_iter)->clip(cs);
                 }
-                (*text_line_iter)->dump_text(out);
+                (*text_line_iter)->dump_text(out, feat, wordNum);
                 ++text_line_iter;
             }
             if(has_clip)
@@ -108,7 +108,7 @@ void HTMLTextPage::clear(void)
 
 void HTMLTextPage::open_new_line(const HTMLLineState & line_state)
 {
-    // do not reused the last text_line even if it's empty
+    // do not reused the last text_line even if it's empty<< w
     // because the clip states may point to the next index
     text_lines.emplace_back(new HTMLTextLine(line_state, param, all_manager));
     cur_line = text_lines.back();

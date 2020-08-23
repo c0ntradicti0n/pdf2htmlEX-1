@@ -83,61 +83,101 @@ void HTMLTextLine::append_state(const HTMLTextState & text_state)
     last_state.font_size *= last_state.font_info->font_size_scale;
 }
 
-void HTMLTextLine::dump_char(std::ostream & out, int pos)
+char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, long & wordNum, int pos)
 {
     int c = text[pos];
     if (c > 0)
     {
         Unicode u = c;
+        if (c == ' ') {
+            wordNum += 1;
+            feat << wordNum;
+        }
         writeUnicodes(out, &u, 1);
+        feat << char(c);
     }
     else if (c < 0)
     {
         auto dt = decomposed_text[- c - 1];
         writeUnicodes(out, &dt.front(), dt.size());
     }
+    return c;
 }
 
-void HTMLTextLine::dump_chars(ostream & out, int begin, int len)
+
+std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, long & word_num, int begin, int len, bool & first)
 {
     static const Color transparent(0, 0, 0, true);
+    std::string outputted = std::string ("");
+    char c = ' ';
+    long old_word_num = word_num;
 
     if (line_state.first_char_index < 0)
     {
-        for (int i = 0; i < len; i++)
-            dump_char(out, begin + i);
-        return;
+
+        for (int i = 0; i < len; i++){
+
+            dump_char(out, feat, word_num, begin + i);
+            outputted.push_back(c);
+        }
+
+        return outputted;
     }
 
     bool invisible_group_open = false;
+
+
     for(int i = 0; i < len; i++)
     {
+        old_word_num = word_num;
+        c = dump_char(out, feat, word_num, begin + i);
+        text.push_back(c);
+
+        if (text[begin+i]== ' ') {
+            out << "</x><x id='" << word_num << "'>";
+            old_word_num = word_num;
+        }
+
+        if (first){
+            out << "<x id='" << word_num << "'>";
+            first = false;
+        }
+
+
+
+
+
+
         if (!line_state.is_char_covered(line_state.first_char_index + begin + i)) //visible
         {
+
             if (invisible_group_open)
             {
                 invisible_group_open = false;
                 out << "</span>";
             }
-            dump_char(out, begin + i);
+
         }
         else
         {
+
             if (!invisible_group_open)
             {
                 out << "<span class=\"" << all_manager.fill_color.get_css_class_name()
                     << all_manager.fill_color.install(transparent) << " " << all_manager.stroke_color.get_css_class_name()
                     << all_manager.stroke_color.install(transparent) << "\">";
                 invisible_group_open = true;
+
             }
-            dump_char(out, begin + i);
         }
     }
     if (invisible_group_open)
         out << "</span>";
+    return  outputted;
+
 }
 
-void HTMLTextLine::dump_text(ostream & out)
+void HTMLTextLine::dump_text(ostream & out, ostream & feat, long & wordNum)
 {
     /*
      * Each Line is an independent absolute positioned block
@@ -153,6 +193,8 @@ void HTMLTextLine::dump_text(ostream & out)
     }
 
     // Start Output
+    bool first = true;
+
     {
         // open <div> for the current text line
         out << "<div class=\"" << CSS::LINE_CN
@@ -181,6 +223,7 @@ void HTMLTextLine::dump_text(ostream & out)
             state_iter1 != states.end(); 
             ++state_iter1, ++state_iter2)
     {
+
         // export current state, find a closest parent
         { 
             // greedy
@@ -229,8 +272,17 @@ void HTMLTextLine::dump_text(ostream & out)
             if((cur_offset_iter != offsets.end()) 
                     && (cur_offset_iter->start_idx <= cur_text_idx))
             {
-                if(cur_offset_iter->start_idx > text_idx2)
+                if(cur_offset_iter->start_idx > text_idx2) {
+                    feat               << " wordnum"             << wordNum
+                            << " " << line_state.transform_matrix
+                         << " " << width
+                         << " " << ascent
+                         << " " << descent
+                            << " " << line_state.x - clip_x1
+                            << " " << line_state.y - clip_y1 << std::endl;
+                    first = true;
                     break;
+                }
                 // next is offset
                 double target = cur_offset_iter->width + dx;
                 double actual_offset = 0;
@@ -281,13 +333,26 @@ void HTMLTextLine::dump_text(ostream & out)
             }
             else
             {
-                if(cur_text_idx >= text_idx2)
+                if(cur_text_idx >= text_idx2) {
+                    feat               << " wordnum"             << wordNum
+                                       << " " << line_state.transform_matrix
+                                       << " " << width
+                                       << " " << ascent
+                                       << " " << descent
+                                       << " " << line_state.x - clip_x1
+                                       << " " << line_state.y - clip_y1 << std::endl;
+
                     break;
+                }
                 // next is text
                 size_t next_text_idx = text_idx2;
-                if((cur_offset_iter != offsets.end()) && (cur_offset_iter->start_idx) < next_text_idx)
+                if((cur_offset_iter != offsets.end()) && (cur_offset_iter->start_idx) < next_text_idx) {
+
                     next_text_idx = cur_offset_iter->start_idx;
-                dump_chars(out, cur_text_idx, next_text_idx - cur_text_idx);
+                    }
+
+
+                dump_chars(out, feat, wordNum, cur_text_idx, next_text_idx - cur_text_idx, first);
                 cur_text_idx = next_text_idx;
             }
         }
@@ -656,6 +721,9 @@ void HTMLTextLine::State::begin (ostream & out, const State * prev_state)
     }
     else
     {
+
+
+
         // prev_state == nullptr
         // which means this is the first state of the line
         // there should be a open pending <div> left there
