@@ -130,8 +130,7 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, long & word_n
     for(int i = 0; i < len; i++)
     {
         old_word_num = word_num;
-        c = dump_char(out, feat, word_num, begin + i);
-        text.push_back(c);
+
 
         if (text[begin+i]== ' ') {
             out << "</x><x id='" << word_num << "'>";
@@ -156,7 +155,7 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, long & word_n
                 invisible_group_open = false;
                 out << "</span>";
             }
-
+            dump_char(out,  feat, word_num,  begin + i);
         }
         else
         {
