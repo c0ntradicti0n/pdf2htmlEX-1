@@ -302,14 +302,15 @@ void ffw_reencode_raw2(const char ** mapping, int mapping_len, int force)
     ffw_do_reencode(enc, force);
 }
 
-void ffw_cidflatten(void)
+bool ffw_cidflatten(void)
 {
     if(!cur_fv->sf->cidmaster) 
     {
         fprintf(stderr, "Cannot flatten a non-CID font\n");
-        return;
+        return false;
     }
     SFFlatten(cur_fv->sf->cidmaster);
+    return true;
 }
 
 /*

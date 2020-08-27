@@ -83,15 +83,15 @@ void HTMLTextLine::append_state(const HTMLTextState & text_state)
     last_state.font_size *= last_state.font_info->font_size_scale;
 }
 
-char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, long & wordNum, int pos)
+char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, int & word_num, int pos)
 {
     int c = text[pos];
     if (c > 0)
     {
         Unicode u = c;
         if (c == ' ') {
-            wordNum += 1;
-            feat << wordNum;
+            word_num += 1;
+            feat << word_num;
         }
         writeUnicodes(out, &u, 1);
         feat << char(c);
@@ -105,12 +105,12 @@ char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, long & wordNum, 
 }
 
 
-std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, long & word_num, int begin, int len, bool & first)
+std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, int & word_num, int begin, int len, bool & first)
 {
     static const Color transparent(0, 0, 0, true);
     std::string outputted = std::string ("");
     char c = ' ';
-    long old_word_num = word_num;
+    int old_word_num = word_num;
 
     if (line_state.first_char_index < 0)
     {
@@ -132,20 +132,16 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, long & word_n
         old_word_num = word_num;
 
 
-        if (text[begin+i]== ' ') {
-            out << "</x><x id='" << word_num << "'>";
+        if (text[begin+i]== ' ' && ! first) {
+            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
             old_word_num = word_num;
         }
 
         if (first){
-            out << "<x id='" << word_num << "'>";
+            out << "<z- id='" <<  std::hex << word_num << "'>";
+            word_num += 1;
             first = false;
         }
-
-
-
-
-
 
         if (!line_state.is_char_covered(line_state.first_char_index + begin + i)) //visible
         {
@@ -176,7 +172,7 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, long & word_n
 
 }
 
-void HTMLTextLine::dump_text(ostream & out, ostream & feat, long & wordNum)
+void HTMLTextLine::dump_text(ostream & out, ostream & feat, int & wordNum)
 {
     /*
      * Each Line is an independent absolute positioned block
@@ -280,6 +276,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, long & wordNum)
                             << " " << line_state.x - clip_x1
                             << " " << line_state.y - clip_y1 << std::endl;
                     first = true;
+                    wordNum += 1;
                     break;
                 }
                 // next is offset
@@ -302,7 +299,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, long & wordNum)
                         {
                             Unicode u = ' ';
 				// Sometimes we guess wrong whether we have a valid space character, so ensure it is always hidden
-                            out << "<span class=\"" << CSS::WHITESPACE_CN << "\">";
+                            out << "<span id='dasd' class=\"" << CSS::WHITESPACE_CN << "\">";
                             writeUnicodes(out, &u, 1);
                             out << "</span>";
                             actual_offset = space_off;
@@ -322,7 +319,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, long & wordNum)
 
                             double threshold = state_iter1->em_size() * (param.space_threshold);
 
-                            out << "<span class=\"" << CSS::WHITESPACE_CN
+                            out << "<span id='wh' class=\"" << CSS::WHITESPACE_CN
                                 << ' ' << CSS::WHITESPACE_CN << wid << "\">" << (target > (threshold - EPS) ? " " : "") << "</span>";
                         }
                     }
@@ -363,7 +360,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, long & wordNum)
         stack.back()->end(out);
         stack.pop_back();
     }
-
+    out << "</z->";
     out << "</div>";
 }
 
@@ -670,7 +667,7 @@ void HTMLTextLine::State::begin (ostream & out, const State * prev_state)
             // so we have to dump it
             if(first)
             { 
-                out << "<span class=\"";
+                out << "<span id='fi' class=\"";
                 first = false;
             }
             else
@@ -691,7 +688,7 @@ void HTMLTextLine::State::begin (ostream & out, const State * prev_state)
             // so we have to dump it
             if(first)
             { 
-                out << "<span class=\"";
+                out << "<span id='va' class=\"";
                 first = false;
             }
             else

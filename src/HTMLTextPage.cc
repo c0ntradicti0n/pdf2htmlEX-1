@@ -27,7 +27,7 @@ HTMLTextPage::~HTMLTextPage()
         delete p;
 }
 
-void HTMLTextPage::dump_text(ostream & out, ostream & feat, long & wordNum)
+void HTMLTextPage::dump_text(ostream & out, ostream & feat, int & wordNum)
 {
     if(param.optimize_text)
     {

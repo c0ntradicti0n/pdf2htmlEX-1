@@ -563,7 +563,10 @@ void HTMLRenderer::embed_font(const string & filepath, GfxFont * font, FontInfo 
         else
         {
             // TODO: add an option to load the table?
-            ffw_cidflatten();
+            bool got_font = ffw_cidflatten();
+            if (!got_font) {
+                this->all_manager.font_size.default_value();
+            }
         }
     }
 
