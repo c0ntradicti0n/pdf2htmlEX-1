@@ -83,7 +83,7 @@ void HTMLTextLine::append_state(const HTMLTextState & text_state)
     last_state.font_size *= last_state.font_info->font_size_scale;
 }
 
-char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, int & word_num, int pos)
+char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, ostream & wordi, int & word_num, int pos)
 {
     int c = text[pos];
     if (c > 0)
@@ -95,6 +95,7 @@ char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, int & word_num, 
         }
         writeUnicodes(out, &u, 1);
         feat << char(c);
+        wordi << char(c);
     }
     else if (c < 0)
     {
@@ -105,19 +106,18 @@ char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, int & word_num, 
 }
 
 
-std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, int & word_num, int begin, int len, bool & first)
+std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, ostream &wordi, int & word_num, int begin, int len, bool & first)
 {
     static const Color transparent(0, 0, 0, true);
     std::string outputted = std::string ("");
     char c = ' ';
-    int old_word_num = word_num;
 
     if (line_state.first_char_index < 0)
     {
 
         for (int i = 0; i < len; i++){
 
-            dump_char(out, feat, word_num, begin + i);
+            c = dump_char(out, feat,wordi, word_num, begin + i);
             outputted.push_back(c);
         }
 
@@ -129,15 +129,14 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, int & word_nu
 
     for(int i = 0; i < len; i++)
     {
-        old_word_num = word_num;
-
 
         if (text[begin+i]== ' ' && ! first) {
             out << "</z-><z- id='"  << std::hex  << word_num << "'>";
-            old_word_num = word_num;
+            wordi << "\n" << word_num << ":" ;
         }
 
-        if (first){
+        if (first) {
+            wordi << "\n" << word_num << ":" ;
             out << "<z- id='" <<  std::hex << word_num << "'>";
             word_num += 1;
             first = false;
@@ -151,7 +150,9 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, int & word_nu
                 invisible_group_open = false;
                 out << "</span>";
             }
-            dump_char(out,  feat, word_num,  begin + i);
+            c = dump_char(out,  feat, wordi, word_num,  begin + i);
+            outputted.push_back(c);
+
         }
         else
         {
@@ -172,7 +173,7 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, int & word_nu
 
 }
 
-void HTMLTextLine::dump_text(ostream & out, ostream & feat, int & wordNum)
+void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int & wordNum)
 {
     /*
      * Each Line is an independent absolute positioned block
@@ -269,7 +270,6 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, int & wordNum)
             {
                 if(cur_offset_iter->start_idx > text_idx2) {
                     feat               << " wordnum"             << wordNum
-                            << " " << line_state.transform_matrix
                          << " " << width
                          << " " << ascent
                          << " " << descent
@@ -331,7 +331,6 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, int & wordNum)
             {
                 if(cur_text_idx >= text_idx2) {
                     feat               << " wordnum"             << wordNum
-                                       << " " << line_state.transform_matrix
                                        << " " << width
                                        << " " << ascent
                                        << " " << descent
@@ -348,7 +347,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, int & wordNum)
                     }
 
 
-                dump_chars(out, feat, wordNum, cur_text_idx, next_text_idx - cur_text_idx, first);
+                dump_chars(out, feat, wordi, wordNum, cur_text_idx, next_text_idx - cur_text_idx, first);
                 cur_text_idx = next_text_idx;
             }
         }

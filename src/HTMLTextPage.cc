@@ -27,7 +27,7 @@ HTMLTextPage::~HTMLTextPage()
         delete p;
 }
 
-void HTMLTextPage::dump_text(ostream & out, ostream & feat, int & wordNum)
+void HTMLTextPage::dump_text(ostream & out, ostream & feat, ostream &wordi, int & wordNum)
 {
     if(param.optimize_text)
     {
@@ -76,7 +76,7 @@ void HTMLTextPage::dump_text(ostream & out, ostream & feat, int & wordNum)
                 {
                     (*text_line_iter)->clip(cs);
                 }
-                (*text_line_iter)->dump_text(out, feat, wordNum);
+                (*text_line_iter)->dump_text(out, feat, wordi, wordNum);
                 ++text_line_iter;
             }
             if(has_clip)

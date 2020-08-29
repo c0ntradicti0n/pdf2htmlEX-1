@@ -1059,7 +1059,7 @@ void HTMLRenderer::export_remote_font(const FontInfo & info, const string & form
              << "format(\"" << css_font_format << "\");"
              << "}" // end of @font-face
              << "." << CSS::FONT_FAMILY_CN << info.id << "{"
-             << "font-family:" << CSS::FONT_FAMILY_CN << info.id << ";"
+             //<< "font-family:" << CSS::FONT_FAMILY_CN << info.id << ";"
              << "line-height:" << round(info.ascent - info.descent) << ";"
              << "font-style:normal;"
              << "font-weight:normal;"

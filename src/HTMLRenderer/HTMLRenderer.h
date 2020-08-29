@@ -374,6 +374,8 @@ protected:
     } f_outline, f_pages, f_css;
     std::ofstream * f_curpage;
         std::ofstream  f_curpage_feat;
+        std::ofstream  f_curpage_wordi;
+
 
         std::string cur_page_filename;
 
