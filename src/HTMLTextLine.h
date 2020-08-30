@@ -85,7 +85,7 @@ public:
     void append_padding_char() { text.push_back(0); }
     void append_offset(double width);
     void append_state(const HTMLTextState & text_state);
-    void dump_text(std::ostream & out, std::ostream & feat, std::ostream &wordi, int & wordNum);
+    void dump_text(std::ostream & out, std::ostream & feat, std::ostream &wordi, int & word_num);
 
     bool text_empty(void) const { return text.empty(); }
     void clear(void);
@@ -106,7 +106,7 @@ private:
      * begin/pos is the index in 'text'.
      */
     std::string dump_chars(std::ostream & out, std::ostream & feat, std::ostream & wordi,int & word_num, int begin, int len, bool & first);
-    char dump_char(std::ostream & out,std::ostream & feat, std::ostream & wordi, int & wordNum, int pos);
+    char dump_char(std::ostream & out,std::ostream & feat, std::ostream & wordi, int & word_num, int pos);
 
     const Param & param;
     AllStateManager & all_manager;

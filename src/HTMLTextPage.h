@@ -42,7 +42,7 @@ public:
     double get_width() { return page_width; }
     double get_height() { return page_height; }
 
-    void dump_text(std::ostream &out, std::ostream &feat, std::ostream &wordi, int & wordNum);
+    void dump_text(std::ostream &out, std::ostream &feat, std::ostream &wordi, int & word_num);
 
 private:
     void optimize(void);

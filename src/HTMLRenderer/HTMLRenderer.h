@@ -260,7 +260,7 @@ protected:
     PDFDoc * cur_doc;
     Catalog * cur_catalog;
     int pageNum;
-    int wordNum = 0;
+    int word_num = 0;
 
 
     double default_ctm[6];

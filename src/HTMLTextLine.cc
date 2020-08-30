@@ -91,7 +91,6 @@ char HTMLTextLine::dump_char(std::ostream & out,ostream & feat, ostream & wordi,
         Unicode u = c;
         if (c == ' ') {
             word_num += 1;
-            feat << word_num;
         }
         writeUnicodes(out, &u, 1);
         feat << char(c);
@@ -133,6 +132,7 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, ostream &word
         if (text[begin+i]== ' ' && ! first) {
             out << "</z-><z- id='"  << std::hex  << word_num << "'>";
             wordi << "\n" << word_num << ":" ;
+            feat << " ";
         }
 
         if (first) {
@@ -140,6 +140,7 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, ostream &word
             out << "<z- id='" <<  std::hex << word_num << "'>";
             word_num += 1;
             first = false;
+            feat << " ";
         }
 
         if (!line_state.is_char_covered(line_state.first_char_index + begin + i)) //visible
@@ -173,7 +174,7 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, ostream &word
 
 }
 
-void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int & wordNum)
+void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int & word_num)
 {
     /*
      * Each Line is an independent absolute positioned block
@@ -269,14 +270,14 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
                     && (cur_offset_iter->start_idx <= cur_text_idx))
             {
                 if(cur_offset_iter->start_idx > text_idx2) {
-                    feat               << " wordnum"             << wordNum
+                    feat          << word_num
                          << " " << width
                          << " " << ascent
                          << " " << descent
                             << " " << line_state.x - clip_x1
                             << " " << line_state.y - clip_y1 << std::endl;
                     first = true;
-                    wordNum += 1;
+                    word_num += 1;
                     break;
                 }
                 // next is offset
@@ -304,6 +305,14 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
                             out << "</span>";
                             actual_offset = space_off;
                             done = true;
+
+
+                            word_num+=1;
+                            wordi  << "\n" << word_num << ":";
+                            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
+                            feat << " ";
+
+
                         }
                     }
 
@@ -321,6 +330,13 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
 
                             out << "<span id='wh' class=\"" << CSS::WHITESPACE_CN
                                 << ' ' << CSS::WHITESPACE_CN << wid << "\">" << (target > (threshold - EPS) ? " " : "") << "</span>";
+
+                            word_num+=1;
+                            wordi  << "\n" << word_num << ":";
+                            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
+                            feat << " ";
+
+
                         }
                     }
                 }
@@ -330,7 +346,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
             else
             {
                 if(cur_text_idx >= text_idx2) {
-                    feat               << " wordnum"             << wordNum
+                    feat               << word_num
                                        << " " << width
                                        << " " << ascent
                                        << " " << descent
@@ -347,7 +363,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
                     }
 
 
-                dump_chars(out, feat, wordi, wordNum, cur_text_idx, next_text_idx - cur_text_idx, first);
+                dump_chars(out, feat, wordi, word_num, cur_text_idx, next_text_idx - cur_text_idx, first);
                 cur_text_idx = next_text_idx;
             }
         }
