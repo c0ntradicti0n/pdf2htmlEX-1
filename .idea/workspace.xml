@@ -25,12 +25,15 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Default" GENERATION_DIR="." />
+      <configuration PROFILE_NAME="Default" GENERATION_DIR="." ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e36df4a-79df-4b7f-8405-ab6ef21e09ab" name="Default Changelist" comment="Whatever I had to do">
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/HTMLRenderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/HTMLRenderer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="Git.Settings">
     <excluded-from-favorite>
       <branch-storage>
@@ -82,35 +84,82 @@
       <recent name="$PROJECT_DIR$/pdf2htmlEX" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.Run">
-    <configuration name="Run" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./test/small_pdfs/h2*.pdf" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="Shell Script.buildPdf2htmlEX (1)">
+    <configuration name="Run" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./test/small_pdfs/h2*.pdf" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pdf2htmlEX" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="pdf2htmlEX" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="pdf2htmlEX">
+    <configuration name="pdf2htmlEX" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="pdf2htmlEX" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="pdf2htmlEX">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$FileName$" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="test1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$FileName$" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="buildInstallLocallyApt" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/buildScripts/buildInstallLocallyApt" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="buildPdf2htmlEX (1)" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/buildScripts/buildPdf2htmlEX" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="buildPdf2htmlEX" type="ShConfigurationType" temporary="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/buildScripts/buildPdf2htmlEX" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <envs />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="CMake Application.Run" />
       <item itemvalue="CMake Application.test1" />
       <item itemvalue="CMake Application.pdf2htmlEX" />
+      <item itemvalue="Shell Script.buildPdf2htmlEX" />
+      <item itemvalue="Shell Script.buildInstallLocallyApt" />
+      <item itemvalue="Shell Script.buildPdf2htmlEX (1)" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.buildPdf2htmlEX" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -154,51 +203,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Whatever I had to do" />
     <option name="LAST_COMMIT_MESSAGE" value="Whatever I had to do" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="305" y="66" width="1076" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599864556456">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="305" y="66" width="1076" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1528.873@72.27.1528.873" timestamp="1599864556456" />
-    <state x="513" y="245" width="655" height="408" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599515150614">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="513" y="245" width="655" height="408" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1528.873@72.27.1528.873" timestamp="1599515150614" />
-    <state x="629" y="170" width="424" height="596" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1599863545696">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="629" y="170" width="424" height="596" key="#com.intellij.ide.macro.MacrosDialog/72.27.1528.873@72.27.1528.873" timestamp="1599863545696" />
-    <state x="243" y="119" width="1200" height="633" key="DiffContextDialog" timestamp="1599516838234">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="243" y="119" width="1200" height="633" key="DiffContextDialog/72.27.1528.873@72.27.1528.873" timestamp="1599516838234" />
-    <state x="629" y="171" width="424" height="496" key="FileChooserDialogImpl" timestamp="1599865472373">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="629" y="171" width="424" height="496" key="FileChooserDialogImpl/72.27.1528.873@72.27.1528.873" timestamp="1599865472373" />
-    <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1599865476272">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel/72.27.1528.873@72.27.1528.873" timestamp="1599865476272" />
-    <state width="640" height="476" key="ImportCMakeProjectWizard.topPanel" timestamp="1599865476272">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state width="640" height="476" key="ImportCMakeProjectWizard.topPanel/72.27.1528.873@72.27.1528.873" timestamp="1599865476272" />
-    <state x="243" y="119" width="1200" height="633" key="ShowDiffWithBranchDialog" timestamp="1599516838234">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="243" y="119" width="1200" height="633" key="ShowDiffWithBranchDialog/72.27.1528.873@72.27.1528.873" timestamp="1599516838234" />
-    <state x="899" y="117" width="625" height="783" key="find.popup" timestamp="1599864234700">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="899" y="117" width="625" height="783" key="find.popup/72.27.1528.873@72.27.1528.873" timestamp="1599864234700" />
-    <state x="571" y="137" width="540" height="624" key="git4idea.branch.GitSmartOperationDialog" timestamp="1599515798744">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="571" y="137" width="540" height="624" key="git4idea.branch.GitSmartOperationDialog/72.27.1528.873@72.27.1528.873" timestamp="1599515798744" />
-    <state x="506" y="201" width="672" height="678" key="search.everywhere.popup" timestamp="1599517148757">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="506" y="201" width="672" height="678" key="search.everywhere.popup/72.27.1528.873@72.27.1528.873" timestamp="1599517148757" />
   </component>
 </project>

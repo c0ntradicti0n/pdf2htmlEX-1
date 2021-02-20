@@ -173,6 +173,10 @@ void HTMLRenderer::process(PDFDoc *doc)
     if(page_count >= 0 && param.quiet == 0)
         cerr << "Working: " << page_count << "/" << page_count;
 
+    f_curpage_feat.close();
+    f_curpage_wordi.close();
+
+
     if(param.quiet == 0)
         cerr << endl;
 
@@ -255,7 +259,7 @@ void HTMLRenderer::endPage() {
     }
 
     // dump all text
-    html_text_page.dump_text(*f_curpage);
+    html_text_page.dump_text(*f_curpage, f_curpage_feat,f_curpage_wordi,  word_num);
     html_text_page.dump_css(f_css.fs);
     html_text_page.clear();
 
@@ -399,6 +403,9 @@ void HTMLRenderer::pre_process(PDFDoc * doc)
     {
         f_curpage = &f_pages.fs;
     }
+    std::string fullPath = doc->getFileName()->toStr();
+    f_curpage_feat.open(fullPath + ".feat");
+    f_curpage_wordi.open(fullPath + ".wordi");
 }
 
 void HTMLRenderer::post_process(void)
