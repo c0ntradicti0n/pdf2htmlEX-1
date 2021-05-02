@@ -2,7 +2,7 @@ make# ![](https://pdf2htmlEX.github.io/pdf2htmlEX/images/pdf2htmlEX-64x64.png) p
 
 [![Build Status](https://travis-ci.org/pdf2htmlEX/pdf2htmlEX.svg?branch=master)](https://travis-ci.org/pdf2htmlEX/pdf2htmlEX)
 
-# Differences from upstream pdf2htmlEX:
+# Differences from upstream pdf2htmlEX: 
 
 This is my branch of pdf2htmlEX which aims to allow an open collaboration to help keep the project active. A number of changes and improvements have been incorperated from other forks:
 
@@ -68,6 +68,8 @@ pdf2htmlEX is made possible thanks to the following projects:
 
 * [poppler](http://poppler.freedesktop.org/)
 * [Fontforge](http://fontforge.org/)
+
+[![Testing Powered By SauceLabs](https://saucelabs.github.io/images/opensauce/powered-by-saucelabs-badge-gray.png?sanitize=true "Testing Powered By SauceLabs")](https://saucelabs.com)
 
 pdf2htmlEX is inspired by the following projects:
 
