@@ -3,7 +3,7 @@
 # This shell script gets and unpacks the latest Poppler source code
 
 # source buildScripts/reSourceVersionEnvs
-. buildScripts/reSourceVersionEnvs
+. buildScripts/versionEnvs
 
 echo ""
 echo "-------------------------------------------------------------------"

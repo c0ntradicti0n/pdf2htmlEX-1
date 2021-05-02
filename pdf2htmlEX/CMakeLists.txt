@@ -6,6 +6,9 @@ project(pdf2htmlEX)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 cmake_minimum_required(VERSION 2.6.0 FATAL_ERROR)
 
+SET(CMAKE_BUILD_TYPE Debug)
+
+
 option(ENABLE_SVG "Enable SVG support, for generating SVG background images and converting Type 3 fonts" ON)
 
 include_directories(${CMAKE_SOURCE_DIR}/src)

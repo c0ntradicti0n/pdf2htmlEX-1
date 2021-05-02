@@ -20,17 +20,48 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="pdf2htmlEX" targetName="ContinuousBuild" />
+      <config projectName="pdf2htmlEX" targetName="ExperimentalSubmit" />
+      <config projectName="pdf2htmlEX" targetName="NightlyConfigure" />
       <config projectName="pdf2htmlEX" targetName="pdf2htmlEX" />
+      <config projectName="pdf2htmlEX" targetName="Continuous" />
+      <config projectName="pdf2htmlEX" targetName="ContinuousStart" />
+      <config projectName="pdf2htmlEX" targetName="ContinuousUpdate" />
+      <config projectName="pdf2htmlEX" targetName="ExperimentalConfigure" />
+      <config projectName="pdf2htmlEX" targetName="dist" />
+      <config projectName="pdf2htmlEX" targetName="ContinuousMemCheck" />
+      <config projectName="pdf2htmlEX" targetName="ContinuousSubmit" />
+      <config projectName="pdf2htmlEX" targetName="NightlyUpdate" />
+      <config projectName="pdf2htmlEX" targetName="ExperimentalUpdate" />
+      <config projectName="pdf2htmlEX" targetName="ContinuousConfigure" />
+      <config projectName="pdf2htmlEX" targetName="ExperimentalMemCheck" />
+      <config projectName="pdf2htmlEX" targetName="ExperimentalBuild" />
+      <config projectName="pdf2htmlEX" targetName="NightlyCoverage" />
+      <config projectName="pdf2htmlEX" targetName="NightlyMemoryCheck" />
+      <config projectName="pdf2htmlEX" targetName="ContinuousTest" />
+      <config projectName="pdf2htmlEX" targetName="NightlyStart" />
+      <config projectName="pdf2htmlEX" targetName="pdf2htmlEX_resources" />
+      <config projectName="pdf2htmlEX" targetName="NightlyBuild" />
+      <config projectName="pdf2htmlEX" targetName="ExperimentalCoverage" />
+      <config projectName="pdf2htmlEX" targetName="NightlyTest" />
+      <config projectName="pdf2htmlEX" targetName="ContinuousCoverage" />
+      <config projectName="pdf2htmlEX" targetName="ExperimentalTest" />
+      <config projectName="pdf2htmlEX" targetName="ExperimentalStart" />
+      <config projectName="pdf2htmlEX" targetName="Experimental" />
+      <config projectName="pdf2htmlEX" targetName="Nightly" />
+      <config projectName="pdf2htmlEX" targetName="NightlyMemCheck" />
+      <config projectName="pdf2htmlEX" targetName="NightlySubmit" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Default" GENERATION_DIR="." />
+      <configuration PROFILE_NAME="Default" GENERATION_DIR="." ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e36df4a-79df-4b7f-8405-ab6ef21e09ab" name="Default Changelist" comment="Whatever I had to do">
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildScripts/getPoppler" beforeDir="false" afterPath="$PROJECT_DIR$/buildScripts/getPoppler" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,42 +105,291 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="ctest.advertisement.all.test.configuration.is.created" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build/pdf2htmlEX" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.profiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pdf2htmlEX" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.Run">
-    <configuration name="Run" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./test/small_pdfs/h2*.pdf" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="CMake Application.Run ...">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Continuous" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="Continuous" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
+    <configuration name="ContinuousBuild" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ContinuousBuild" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ContinuousBuild">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pdf2htmlEX" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="pdf2htmlEX" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="pdf2htmlEX">
+    <configuration name="ContinuousConfigure" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ContinuousConfigure" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ContinuousConfigure">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$FileName$" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="ContinuousCoverage" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ContinuousCoverage" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ContinuousCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousMemCheck" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ContinuousMemCheck" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ContinuousMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousStart" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ContinuousStart" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ContinuousStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousSubmit" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ContinuousSubmit" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ContinuousSubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousTest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ContinuousTest" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ContinuousTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContinuousUpdate" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ContinuousUpdate" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ContinuousUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Experimental" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="Experimental" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalBuild" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ExperimentalBuild" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ExperimentalBuild">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalConfigure" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ExperimentalConfigure" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ExperimentalConfigure">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalCoverage" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ExperimentalCoverage" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ExperimentalCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalMemCheck" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ExperimentalMemCheck" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ExperimentalMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalStart" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ExperimentalStart" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ExperimentalStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalSubmit" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ExperimentalSubmit" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ExperimentalSubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalTest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ExperimentalTest" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ExperimentalTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExperimentalUpdate" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="ExperimentalUpdate" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="ExperimentalUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nightly" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="Nightly" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyBuild" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlyBuild" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlyBuild">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyConfigure" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlyConfigure" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlyConfigure">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyCoverage" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlyCoverage" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlyCoverage">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyMemCheck" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlyMemCheck" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlyMemCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyMemoryCheck" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlyMemoryCheck" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlyMemoryCheck">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyStart" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlyStart" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlyStart">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlySubmit" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlySubmit" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlySubmit">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyTest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlyTest" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlyTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NightlyUpdate" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="NightlyUpdate" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="NightlyUpdate">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run ..." type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./test/small_pdfs/glue.pdf" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/pdf2htmlEX/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./test/small_pdfs/glue.pdf" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/pdf2htmlEX/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dist" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="dist" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pdf2htmlEX" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="pdf2htmlEX" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="pdf2htmlEX">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pdf2htmlEX_resources" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="pdf2htmlEX_resources" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$FileName$" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$CMakeCurrentGenerationDir$" PASS_PARENT_ENVS_2="true" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="CMake Application.Run" />
+      <item itemvalue="CMake Application.Run ..." />
       <item itemvalue="CMake Application.test1" />
+      <item itemvalue="CMake Application.Continuous" />
+      <item itemvalue="CMake Application.ContinuousBuild" />
+      <item itemvalue="CMake Application.ContinuousConfigure" />
+      <item itemvalue="CMake Application.ContinuousCoverage" />
+      <item itemvalue="CMake Application.ContinuousMemCheck" />
+      <item itemvalue="CMake Application.ContinuousStart" />
+      <item itemvalue="CMake Application.ContinuousSubmit" />
+      <item itemvalue="CMake Application.ContinuousTest" />
+      <item itemvalue="CMake Application.ContinuousUpdate" />
+      <item itemvalue="CMake Application.dist" />
+      <item itemvalue="CMake Application.Experimental" />
+      <item itemvalue="CMake Application.ExperimentalBuild" />
+      <item itemvalue="CMake Application.ExperimentalConfigure" />
+      <item itemvalue="CMake Application.ExperimentalCoverage" />
+      <item itemvalue="CMake Application.ExperimentalMemCheck" />
+      <item itemvalue="CMake Application.ExperimentalStart" />
+      <item itemvalue="CMake Application.ExperimentalSubmit" />
+      <item itemvalue="CMake Application.ExperimentalTest" />
+      <item itemvalue="CMake Application.ExperimentalUpdate" />
+      <item itemvalue="CMake Application.Nightly" />
+      <item itemvalue="CMake Application.NightlyBuild" />
+      <item itemvalue="CMake Application.NightlyConfigure" />
+      <item itemvalue="CMake Application.NightlyCoverage" />
+      <item itemvalue="CMake Application.NightlyMemCheck" />
+      <item itemvalue="CMake Application.NightlyMemoryCheck" />
+      <item itemvalue="CMake Application.NightlyStart" />
+      <item itemvalue="CMake Application.NightlySubmit" />
+      <item itemvalue="CMake Application.NightlyTest" />
+      <item itemvalue="CMake Application.NightlyUpdate" />
       <item itemvalue="CMake Application.pdf2htmlEX" />
+      <item itemvalue="CMake Application.pdf2htmlEX_resources" />
+      <item itemvalue="CTest Application.All CTest" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -125,6 +405,7 @@
       <workItem from="1599863100391" duration="1618000" />
       <workItem from="1599865344736" duration="104000" />
       <workItem from="1599865449899" duration="30000" />
+      <workItem from="1619954792502" duration="1358000" />
     </task>
     <task id="LOCAL-00001" summary="Whatever I had to do">
       <created>1599517384609</created>
@@ -155,50 +436,20 @@
     <MESSAGE value="Whatever I had to do" />
     <option name="LAST_COMMIT_MESSAGE" value="Whatever I had to do" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="305" y="66" width="1076" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599864556456">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="305" y="66" width="1076" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1528.873@72.27.1528.873" timestamp="1599864556456" />
-    <state x="513" y="245" width="655" height="408" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599515150614">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="513" y="245" width="655" height="408" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1528.873@72.27.1528.873" timestamp="1599515150614" />
-    <state x="629" y="170" width="424" height="596" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1599863545696">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="629" y="170" width="424" height="596" key="#com.intellij.ide.macro.MacrosDialog/72.27.1528.873@72.27.1528.873" timestamp="1599863545696" />
-    <state x="243" y="119" width="1200" height="633" key="DiffContextDialog" timestamp="1599516838234">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="243" y="119" width="1200" height="633" key="DiffContextDialog/72.27.1528.873@72.27.1528.873" timestamp="1599516838234" />
-    <state x="629" y="171" width="424" height="496" key="FileChooserDialogImpl" timestamp="1599865472373">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="629" y="171" width="424" height="496" key="FileChooserDialogImpl/72.27.1528.873@72.27.1528.873" timestamp="1599865472373" />
-    <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1599865476272">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel/72.27.1528.873@72.27.1528.873" timestamp="1599865476272" />
-    <state width="640" height="476" key="ImportCMakeProjectWizard.topPanel" timestamp="1599865476272">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state width="640" height="476" key="ImportCMakeProjectWizard.topPanel/72.27.1528.873@72.27.1528.873" timestamp="1599865476272" />
-    <state x="243" y="119" width="1200" height="633" key="ShowDiffWithBranchDialog" timestamp="1599516838234">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="243" y="119" width="1200" height="633" key="ShowDiffWithBranchDialog/72.27.1528.873@72.27.1528.873" timestamp="1599516838234" />
-    <state x="899" y="117" width="625" height="783" key="find.popup" timestamp="1599864234700">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="899" y="117" width="625" height="783" key="find.popup/72.27.1528.873@72.27.1528.873" timestamp="1599864234700" />
-    <state x="571" y="137" width="540" height="624" key="git4idea.branch.GitSmartOperationDialog" timestamp="1599515798744">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="571" y="137" width="540" height="624" key="git4idea.branch.GitSmartOperationDialog/72.27.1528.873@72.27.1528.873" timestamp="1599515798744" />
-    <state x="506" y="201" width="672" height="678" key="search.everywhere.popup" timestamp="1599517148757">
-      <screen x="72" y="27" width="1528" height="873" />
-    </state>
-    <state x="506" y="201" width="672" height="678" key="search.everywhere.popup/72.27.1528.873@72.27.1528.873" timestamp="1599517148757" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc</url>
+          <line>139</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc</url>
+          <line>173</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
