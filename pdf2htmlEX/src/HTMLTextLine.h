@@ -85,10 +85,12 @@ public:
     void append_padding_char() { text.push_back(0); }
     void append_offset(double width);
     void append_state(const HTMLTextState & text_state);
-    void dump_text(std::ostream & out, std::ostream & feat, std::ostream &wordi, int & word_num);
+    void dump_text(std::ostream & out, std::ostream & feat, std::ostream &wordi, int & word_num, int & page_num);
 
     bool text_empty(void) const { return text.empty(); }
     void clear(void);
+
+    HTMLTextLine * set_page(int page_num);
 
     void clip(const HTMLClipState &);
 
@@ -115,6 +117,7 @@ private:
     double ascent, descent;
     double clip_x1, clip_y1;
     double width;
+    int page_num = 0;
 
     std::vector<State> states;
     std::vector<Offset> offsets;

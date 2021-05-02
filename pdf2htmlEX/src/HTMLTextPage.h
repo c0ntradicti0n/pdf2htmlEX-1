@@ -42,7 +42,7 @@ public:
     double get_width() { return page_width; }
     double get_height() { return page_height; }
 
-    void dump_text(std::ostream &out, std::ostream &feat, std::ostream &wordi, int & word_num);
+    void dump_text(std::ostream &out, std::ostream &feat, std::ostream &wordi, int & word_num, int & page_num);
 
 private:
     void optimize(void);
@@ -51,6 +51,7 @@ private:
     AllStateManager & all_manager;
     HTMLTextLine * cur_line;
     double page_width, page_height;
+    int page_num;
 
     std::vector<HTMLTextLine*> text_lines;
 

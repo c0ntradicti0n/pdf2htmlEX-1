@@ -46,7 +46,7 @@ void ffw_reencode_unicode_full(void);
 void ffw_reencode_raw(int32_t * mapping, int mapping_len, int force);
 void ffw_reencode_raw2(const char ** mapping, int mapping_len, int force);
 
-bool ffw_cidflatten(void);
+void ffw_cidflatten(void);
 // add a new empty char into the font
 void ffw_add_empty_char(int32_t unicode, int width);
 

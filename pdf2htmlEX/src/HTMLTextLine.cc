@@ -130,14 +130,14 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, ostream &word
     {
 
         if (text[begin+i]== ' ' && ! first) {
-            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
+            out << "</z-><z class='z"  << std::hex  << word_num << "'>";
             wordi << "\n" << word_num << ":" ;
             feat << " ";
         }
 
         if (first) {
             wordi << "\n" << word_num << ":" ;
-            out << "<z- id='" <<  std::hex << word_num << "'>";
+            out << "<z class='z" <<  std::hex << word_num << "'>";
             word_num += 1;
             first = false;
             feat << " ";
@@ -174,7 +174,14 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, ostream &word
 
 }
 
-void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int & word_num)
+HTMLTextLine * HTMLTextLine::set_page(int page_num)
+{
+    this->page_num = page_num;
+    return this;
+}
+
+
+void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int & word_num, int & page_num)
 {
     /*
      * Each Line is an independent absolute positioned block
@@ -270,10 +277,11 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
                     && (cur_offset_iter->start_idx <= cur_text_idx))
             {
                 if(cur_offset_iter->start_idx > text_idx2) {
-                    feat          << word_num
-                         << " " << width
-                         << " " << ascent
-                         << " " << descent
+                    feat    << " " << cur_offset_iter->start_idx
+                            << " " <<  this->page_num
+                            << " " << width
+                            << " " << ascent
+                            << " " << descent
                             << " " << line_state.x - clip_x1
                             << " " << line_state.y - clip_y1 << std::endl;
                     first = true;
@@ -309,7 +317,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
 
                             word_num+=1;
                             wordi  << "\n" << word_num << ":";
-                            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
+                            out << "</z-><z class='z"  << std::hex  << word_num << "'>";
                             feat << " ";
 
 
@@ -333,7 +341,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
 
                             word_num+=1;
                             wordi  << "\n" << word_num << ":";
-                            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
+                            out << "</z-><z class='z"  << std::hex  << word_num << "'>";
                             feat << " ";
 
 
@@ -346,7 +354,8 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
             else
             {
                 if(cur_text_idx >= text_idx2) {
-                    feat               << word_num
+                    feat               << " " << word_num
+                                       << " " << page_num
                                        << " " << width
                                        << " " << ascent
                                        << " " << descent
