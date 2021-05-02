@@ -59,15 +59,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e36df4a-79df-4b7f-8405-ab6ef21e09ab" name="Default Changelist" comment="setup for debugging">
+    <list default="true" id="3e36df4a-79df-4b7f-8405-ab6ef21e09ab" name="Default Changelist" comment="recording page number in features">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/font.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/font.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.h" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextPage.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextPage.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextPage.h" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextPage.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/util/ffw.h" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/util/ffw.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildScripts/installPdf2htmlEX" beforeDir="false" afterPath="$PROJECT_DIR$/buildScripts/installPdf2htmlEX" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -421,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599517384609</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="recording page number in features">
+      <created>1619958030218</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619958030218</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +442,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Whatever I had to do" />
-    <option name="LAST_COMMIT_MESSAGE" value="Whatever I had to do" />
+    <MESSAGE value="recording page number in features" />
+    <option name="LAST_COMMIT_MESSAGE" value="recording page number in features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
