@@ -215,6 +215,7 @@ void HTMLRenderer::endPage() {
     long long wid = all_manager.width.install(html_text_page.get_width());
     long long hid = all_manager.height.install(html_text_page.get_height());
 
+
     (*f_curpage)
         << "<div id=\"" << CSS::PAGE_FRAME_CN << pageNum
             << "\" class=\"" << CSS::PAGE_FRAME_CN

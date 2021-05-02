@@ -27,7 +27,7 @@ public:
     HTMLTextPage (const Param & param, AllStateManager & all_manager);
     ~HTMLTextPage();
 
-    HTMLTextLine * get_cur_line(void) const { return cur_line; }
+    HTMLTextLine * get_cur_line(void) const { return cur_line->set_page(page_num); }
 
     void dump_text(std::ostream & out);
     void dump_css(std::ostream & out);
@@ -51,6 +51,7 @@ private:
     AllStateManager & all_manager;
     HTMLTextLine * cur_line;
     double page_width, page_height;
+    int page_num;
 
     std::vector<HTMLTextLine*> text_lines;
 

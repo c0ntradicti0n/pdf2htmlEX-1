@@ -130,14 +130,14 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, ostream &word
     {
 
         if (text[begin+i]== ' ' && ! first) {
-            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
+            out << "</z-><z class='z"  << std::hex  << word_num << "'>";
             wordi << "\n" << word_num << ":" ;
             feat << " ";
         }
 
         if (first) {
             wordi << "\n" << word_num << ":" ;
-            out << "<z- id='" <<  std::hex << word_num << "'>";
+            out << "<z class='z" <<  std::hex << word_num << "'>";
             word_num += 1;
             first = false;
             feat << " ";
@@ -173,6 +173,13 @@ std::string  HTMLTextLine::dump_chars(ostream &out, ostream &feat, ostream &word
     return  outputted;
 
 }
+
+HTMLTextLine * HTMLTextLine::set_page(int page_num)
+{
+    this->page_num = page_num;
+    return this;
+}
+
 
 void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int & word_num)
 {
@@ -270,7 +277,9 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
                     && (cur_offset_iter->start_idx <= cur_text_idx))
             {
                 if(cur_offset_iter->start_idx > text_idx2) {
-                    feat          << word_num
+                    feat << " " << cur_offset_iter->start_idx
+                    << " " <<  this->page_num
+
                          << " " << width
                          << " " << ascent
                          << " " << descent
@@ -309,7 +318,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
 
                             word_num+=1;
                             wordi  << "\n" << word_num << ":";
-                            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
+                            out << "</z-><z class='z"  << std::hex  << word_num << "'>";
                             feat << " ";
 
 
@@ -333,7 +342,7 @@ void HTMLTextLine::dump_text(ostream & out, ostream & feat, ostream &wordi, int 
 
                             word_num+=1;
                             wordi  << "\n" << word_num << ":";
-                            out << "</z-><z- id='"  << std::hex  << word_num << "'>";
+                            out << "</z-><z class='z"  << std::hex  << word_num << "'>";
                             feat << " ";
 
 

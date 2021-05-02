@@ -20,7 +20,7 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="pdf2htmlEX" targetName="pdf2htmlEX" />
+      <config projectName="pdf2htmlEX_1" targetName="pdf2htmlEX_1" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -31,9 +31,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3e36df4a-79df-4b7f-8405-ab6ef21e09ab" name="Default Changelist" comment="Whatever I had to do">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/HTMLRenderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/HTMLRenderer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.h" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextPage.h" beforeDir="false" afterPath="$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextPage.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="Git.Settings">
     <excluded-from-favorite>
       <branch-storage>
@@ -66,6 +68,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1hCUvoh35PaiLoooV3UUCwygh2Z" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -78,14 +88,15 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build/pdf2htmlEX" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pdf2htmlEX" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.buildPdf2htmlEX (1)">
-    <configuration name="Run" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./test/small_pdfs/h2*.pdf" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="CMake Application.Run">
+    <configuration name="Run" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$USER_HOME$/PycharmProjects/LayoutEagle/test/glue.pdf" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/pdf2htmlEX/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -95,12 +106,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pdf2htmlEX" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX" TARGET_NAME="pdf2htmlEX" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX" RUN_TARGET_NAME="pdf2htmlEX">
+    <configuration name="pdf2htmlEX_1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pdf2htmlEX_1" TARGET_NAME="pdf2htmlEX_1" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="pdf2htmlEX_1" RUN_TARGET_NAME="pdf2htmlEX_1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$FileName$" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="test1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$USER_HOME$/PycharmProjects/LayoutEagle/test/glue.pdf" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Default" RUN_PATH="$PROJECT_DIR$/pdf2htmlEX/build/pdf2htmlEX" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2" />
     </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
@@ -150,10 +161,10 @@
     <list>
       <item itemvalue="CMake Application.Run" />
       <item itemvalue="CMake Application.test1" />
-      <item itemvalue="CMake Application.pdf2htmlEX" />
-      <item itemvalue="Shell Script.buildPdf2htmlEX" />
+      <item itemvalue="CMake Application.pdf2htmlEX_1" />
       <item itemvalue="Shell Script.buildInstallLocallyApt" />
       <item itemvalue="Shell Script.buildPdf2htmlEX (1)" />
+      <item itemvalue="Shell Script.buildPdf2htmlEX" />
     </list>
     <recent_temporary>
       <list>
@@ -174,6 +185,7 @@
       <workItem from="1599863100391" duration="1618000" />
       <workItem from="1599865344736" duration="104000" />
       <workItem from="1599865449899" duration="30000" />
+      <workItem from="1619743758950" duration="1340000" />
     </task>
     <task id="LOCAL-00001" summary="Whatever I had to do">
       <created>1599517384609</created>
@@ -203,5 +215,40 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Whatever I had to do" />
     <option name="LAST_COMMIT_MESSAGE" value="Whatever I had to do" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pdf2htmlEX/src/HTMLTextLine.cc</url>
+          <line>178</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/state.cc</url>
+          <line>497</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc</url>
+          <line>102</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc</url>
+          <line>100</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pdf2htmlEX/src/HTMLRenderer/general.cc</url>
+          <line>101</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
